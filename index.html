@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>form elements</title>	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">	
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
+	<script src="./js/ski-main.js"></script>	
+	</head>
+	<body>
+
+		<div class="container">
+			<address class="address-tile">
+	<div class="address-wrapper">
+		<div class="address-fields">
+			<span class="adds prefix" data-val="Miss">Miss</span>
+			<span class="adds firstname">Audrey</span>
+			<span class="adds lastname">Hepburn</span>
+			<span class="adds addressname">Home</span>
+			<span class="adds addressnickname" data-hidden="Address##5"></span>
+			<span class="adds houseno">Manor Cottage<em>,</em></span>
+			<span class="adds address1">99 Crandall Lane<em>,</em></span>
+			<span class="adds address2"></span>
+			<span class="adds city">Aldbury</span>
+			<span class="adds state"></span>
+			<span class="adds pincode">SG6 1PQ<em>,</em></span>
+			<span class="adds country" data-val="UK">United Kingdom</span>
+			<span class="adds county" data-val="UK">UK</span>
+			<span class="adds contact">0780 1234567</span>
+
+			<span class="adds addressId hidden">Address##5</span>
+			<span class="adds defaultShippingValue hidden">true</span>
+			<span class="adds defaultBillingValue hidden">true</span>
+		</div>
+		<hr>
+		<form id="editTileBlock" action="">
+			<fieldset class="fieldset">
+				<div class="form-group checkbox">
+					<input type="checkbox" value="that" id="deliveryAddressCheck1" class="deliveryAddressCheck">
+					<label for="deliveryAddressCheck1">
+						Preferred delivery address
+					</label>
+				</div>
+				<div class="form-group checkbox">
+					<input type="checkbox" value="this" id="billingAddressCheck1" class="billingAddressCheck">
+					<label for="billingAddressCheck1">
+						Preferred billing address
+					</label>
+				</div>
+				
+				<a href="javascript:void(0);" role="button" class="pull-left delete-link"  data-target="#delete_address_container" data-toggle="modal">DELETE</a>
+
+				<button class="sec-btn btn-edit pull-right" data-idval="val_12">EDIT</button>
+
+			</fieldset>
+		</form>
+	</div>	
+</address>
+			<form id="addressAddEdit" action="#" method="POST">
+				<fieldset class="fieldset">
+					<div class="form-group form-group-lg active active-blur">
+						<label for="country">COUNTRY</label>
+						<i class="icon-arrow-down"></i>
+						<select class="form-control" id="country" name="country" data-toggle="country">
+							<option value="0"></option>
+							<option value="UK">United Kingdom</option>
+							<option value="IE" selected="selected">Ireland</option>
+							<option value="PL">Poland</option>
+						</select>
+					</div>
+				
+					<div class="form-group form-group-sm">
+						<label for="prefix">TITLE</label>
+						<i class="icon-arrow-down"></i>
+						<select class="form-control" id="prefix" name="prefix"  data-toggle="title">
+							<option value="0"></option>
+							<option value="Mr">Mr</option>
+							<option value="Miss" selected="selected">Miss</option>
+							<option value="Mrs">Mrs</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+					<div class="form-group form-group-lg" data-toggle="other">
+						<label for="othertitle">OTHER</label>
+						<input id="othertitle" type="text" class="form-control" name="othertitle">
+					</div>
+					<div class="form-group form-group-lg">
+						<label for="firstname">FIRST NAME</label>
+						<input type="text" class="form-control" id="firstname" name="firstname">
+					</div>
+					<div class="form-group form-group-lg">
+						<label for="lastname">LAST NAME</label>
+						<input type="text" class="form-control" id="lastname" name="lastname">
+					</div>
+					<div class="form-group form-group-lg">
+						<label for="contact">PHONE NUMBER</label>
+						<input type="text" class="form-control" id="contact" name="contact">
+					</div>
+					<hr class="visible-xs visible-sm visible-md visible-lg">
+					<div class="form-group form-group-lg">
+						<label for="addressnickname">NICKNAME <em>(optional)</em></label>
+						<input type="text" class="form-control" id="addressnickname" name="addressnickname">
+					</div>
+					
+						<div class="form-group form-group-lg hideCommonFields">
+							<label for="houseno">HOUSE NAME/FLAT NUMBER</label>
+							<input type="text" class="form-control changeTextCase" id="houseno" name="houseno">
+						</div>
+						<div class="form-group form-group-lg hideCommonFields">
+							<label for="address1">ADDRESS LINE 1</label>
+							<input type="text" class="form-control changeTextCase" id="address1" name="address1">
+						</div>
+						<div class="form-group form-group-lg hideCommonFields">
+							<label for="address2">ADDRESS LINE 2</label>
+							<input type="text" class="form-control changeTextCase" id="address2" name="address2">
+						</div>
+						<div class="form-group form-group-lg hideCommonFields">
+							<label for="city">TOWN/CITY</label>
+							<input type="text" class="form-control changeTextCase" id="city" name="city">
+						</div>
+						<div class="form-group form-group-lg hideCommonFields">
+							<label for="state">COUNTY <em>(optional)</em></label>
+							<i class="icon-arrow-down"></i>
+							<select class="form-control changeTextCase" id="state" data-toggle="select" name="state">
+								<option value="0"></option>
+								<option value="UK">United Kingdom</option>
+								<option value="IE" selected="selected">Ireland</option>
+								<option value="PL">Poland</option>
+							</select>
+						</div>
+					
+					<hr>
+				
+
+					<input class="btn btn-default fnf-btn btn-add-edit pull-right" type="submit" value="UPDATE ADDRESS">	
+				</fieldset>
+			</form>
+
+		</div>	
+<script>
+	
+$('.btn-edit').prepform();
+	
+</script>
+	</body>
+
+</html>
